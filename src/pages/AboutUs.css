@@ -1,0 +1,513 @@
+/* AboutUs.css */
+
+.about-us {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: #f4f4f4; /* Light background for contrast */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center; /* Center align items vertically */
+  gap: 40px; /* Space between content and image */
+}
+
+.about-content {
+  flex: 1; /* Allows content to take up available space */
+  max-width: 50%; /* Ensures content takes up half the width */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  animation: fadeInLeft 1.5s ease-out; /* Animation for content */
+}
+
+.about-content h1 {
+  font-size: 2.5rem; /* Adjust font size */
+  color: #fff; /* White text color */
+  margin-bottom: 20px; /* Space below heading */
+  font-weight: 700; /* Bold text */
+}
+
+.about-content p {
+  font-size: 1.2rem; /* Adjust font size */
+  color: #e0e0e0; /* Light color for text */
+  line-height: 1.6; /* Line height for readability */
+}
+
+.about-image {
+  flex: 1; /* Allows image to take up available space */
+  max-width: 50%; /* Ensures image takes up half the width */
+}
+
+.about-image img {
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for image */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Box shadow for image */
+  animation: fadeInRight 1.5s ease-out; /* Animation for image */
+}
+
+/* Keyframes for Fade In Left Animation */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for Fade In Right Animation */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* src/pages/AboutUs.css */
+
+/* Mission Section */
+.mission {
+  background: linear-gradient(to right, #f9f9f9, #e0e0e0);
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mission-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ff6f61, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mission-title:hover {
+  transform: scale(1.05);
+}
+
+.mission-description {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mission-description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mission-description:hover::before {
+  opacity: 1;
+}
+
+/* Optional: Add a subtle animation to the background */
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+.mission::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/purty-wood.png');
+  opacity: 0.1;
+  animation: backgroundAnimation 30s infinite linear;
+  z-index: 0;
+}
+
+/* AboutUs.css */
+
+/* Our Story Section */
+.story {
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc); /* Light blue gradient */
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.story-container h3 {
+  font-size: 2.5rem;
+  color: #00796b; /* Teal color for header */
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.story-container h3::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: #00796b; /* Teal underline */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.story-quote {
+  background: #ffffff; /* White background for the quote */
+  border-left: 6px solid #00796b; /* Teal border */
+  padding: 30px;
+  margin: 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.story-quote:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.story-quote::before {
+  content: open-quote;
+  font-size: 5rem;
+  color: #00796b; /* Teal color */
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.story-quote::after {
+  content: close-quote;
+  font-size: 5rem;
+  color: #00796b; /* Teal color */
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+}
+
+.quote-author {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00796b;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Our Team Section */
+.team {
+  background-color: #f4f7f6; /* Soft background color for a clean look */
+  padding: 80px 20px; /* Ample padding for spacing */
+}
+
+.team h2 {
+  font-size: 2.5rem; /* Larger font size for the section title */
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.team h1 {
+  font-size: 1.5rem; /* Font size for description */
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align the cards */
+  gap: 30px; /* Space between cards */
+  max-width: 1200px; /* Maximum width for the container */
+  margin: 0 auto; /* Center align the container */
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 12px; /* Rounded corners for cards */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow: hidden;
+  width: 280px; /* Adjusted width for a better fit */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  position: relative;
+  cursor: pointer;
+  animation: fadeInUp 1s ease-out; /* Animation for cards */
+}
+
+.team-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.team-card-image {
+  width: 100%;
+  height: 200px; /* Adjusted height for a balanced look */
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.team-card:hover .team-card-image {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.team-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card-content h3 {
+  font-size: 1.3rem; /* Font size for the name */
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.team-card-content p {
+  font-size: 1rem; /* Font size for the role */
+  color: #777;
+  margin: 0;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Mission, Story, and Why Choose Us Sections */
+.container {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+ul li strong {
+  color: #444;
+}
+
+/* Team Section */
+.team {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.team-card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.team-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.team-card p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.why-choose-us ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.why-choose-us ul li strong {
+  color: #444;
+}
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.why-choose-us .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.why-choose-us .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.why-choose-us .box {
+  background: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out;
+}
+
+.why-choose-us .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.why-choose-us .box-icon {
+  font-size: 3rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.why-choose-us .box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.why-choose-us .box p {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
