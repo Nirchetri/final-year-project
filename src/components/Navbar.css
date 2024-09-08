@@ -71,33 +71,50 @@
 .navbar-links li:hover::after {
   width: 100%; /* Full-width underline on hover */
 }
-
-/* Smaller Hamburger Menu */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center; /* Centers the bars */
+  align-items: center; /* Centers the bars horizontally */
   cursor: pointer;
+  background-color: cyan; /* Cyan background */
+  width: 40px;
+  height: 40px;
+  border-radius: 20%; 
   transition: all 0.3s ease;
+  padding: 10px; /* Adds inner spacing */
+  margin-left: 15px;
 }
 
 .hamburger .bar {
-  width: 20px;  /* Reduced width */
-  height: 2px;  /* Reduced height */
-  background-color: white;
-  margin: 3px 0;  /* Reduced spacing */
+  width: 25px;  /* Set the width of each bar */
+  height: 20px;  /* Set the height of each bar */
+  background-color: White; /* White bars */
+  margin: 3px 0;  /* Spacing between the bars */
+  border-radius: 10px; /* Adds a rounded effect to the bars */
   transition: all 0.3s ease;
 }
 
+/* Toggle effect for the hamburger */
 .hamburger.toggle .bar:nth-child(1) {
   transform: rotate(45deg) translate(4px, 4px);
 }
 
 .hamburger.toggle .bar:nth-child(2) {
-  opacity: 0;
+  opacity: 0; /* Hide the middle bar */
 }
 
 .hamburger.toggle .bar:nth-child(3) {
   transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+    margin-right: auto; /* Align hamburger to the left */
+  }
 }
 
 /* Responsive styling */
@@ -151,10 +168,5 @@
     background-color: #4fd1c5;
     color: #374151;
     border-radius: 5px;
-  }
-
-  .hamburger {
-    display: flex;
-    margin-right: auto; /* Moves the hamburger to the left */
   }
 }

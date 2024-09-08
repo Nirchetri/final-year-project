@@ -1,9 +1,12 @@
 import React from "react";
 import Slider from "react-slick";
 import Footer from "../components/Footer"; // Adjust the path as needed
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
 import "./Home.css"; // For custom styling
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const settings = {
     dots: true,
     infinite: true,
@@ -13,6 +16,11 @@ const Home = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     arrows: false,
+  };
+
+  // Function to handle redirection to the Contact Us page
+  const redirectToContact = () => {
+    navigate("/contact-us");
   };
 
   return (
@@ -43,9 +51,9 @@ const Home = () => {
             <p>
               Cutting-Edge Technology: Harness the power of the latest
               technology to drive your business forward. Customizable
-              Options:Tailor solutions to meet the unique needs of your
+              Options: Tailor solutions to meet the unique needs of your
               business. Seamless Integration: Easily integrate with existing
-              systems for a smooth transition
+              systems for a smooth transition.
             </p>
           </div>
           <div className="feature-card">
@@ -98,7 +106,9 @@ const Home = () => {
       <section className="contact">
         <h2>Get in Touch</h2>
         <p>Have questions? Feel free to contact us.</p>
-        <button className="cta-button">Contact Us</button>
+        <button className="cta-button" onClick={redirectToContact}>
+          Contact Us
+        </button>
       </section>
 
       <Footer />

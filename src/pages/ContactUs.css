@@ -1,24 +1,3 @@
-/* src/pages/ContactUs.css */
-.contact-page {
-  font-family: Arial, sans-serif;
-}
-
-.contact-hero {
-  background-color: #007bff; /* Replace with your preferred color */
-  color: #fff;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.contact-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-description {
-  font-size: 1.25rem;
-}
-
 .contact-info {
   background-color: #f9f9f9; /* Light background for contrast */
   padding: 3rem 0;
@@ -26,15 +5,28 @@
 
 .info-title {
   font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
+  text-align: left; /* Align title to the left */
+  margin: 0 2rem 2rem 0; /* Add some margin to the right and bottom */
+  padding-left: 1rem; /* Add padding to move title a bit to the right if needed */
+  animation: fadeInSlide 0.6s ease-out; /* Apply the animation */
+}
+
+.contact-info .container {
+  display: flex;
+  justify-content: space-between; /* Space out the elements */
+  gap: 2rem; /* Add space between elements */
+}
+
+.contact-details,
+.contact-form-section {
+  flex: 1; /* Allow both sections to take up equal space */
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  align-items: center;
+  align-items: flex-start; /* Align to the left side */
 }
 
 .contact-item {
