@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Link Kiwi Description */}
         <div className="footer-description">
           <h1>Link Kiwi</h1>
-          <p>Empower. Innovate. Succeed.</p>
+          <p>THE ART OF SMART LINKING</p>
         </div>
 
         {/* Contact Information */}
@@ -17,7 +17,6 @@ const Footer = () => {
           <h3>Contact</h3>
           <p>500 Main Street, YourCity, XYZ</p>
           <p><strong>General Inquiries:</strong> info@linkkiwi.com</p>
-          <p><strong>Sales:</strong> sales@linkkiwi.com</p>
           <p><strong>Customer Care:</strong> hello@linkkiwi.com</p>
         </div>
 

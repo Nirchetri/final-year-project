@@ -1,11 +1,14 @@
+// src/pages/Home.js
 import React from "react";
 import Slider from "react-slick";
-import Footer from "../components/Footer"; // Adjust the path as needed
-import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
-import "./Home.css"; // For custom styling
+import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import CustomButton from "../components/CustomButton"; // Import CustomButton
+import "./Home.css";
 
 const Home = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const settings = {
     dots: true,
@@ -18,13 +21,13 @@ const Home = () => {
     arrows: false,
   };
 
-  // Function to handle redirection to the Contact Us page
   const redirectToContact = () => {
     navigate("/contact-us");
   };
 
   return (
     <div className="home">
+      {/* Hero Section */}
       <section className="hero">
         <div>
           <video autoPlay muted loop className="hero-video">
@@ -35,56 +38,50 @@ const Home = () => {
         <div className="hero-content">
           <h1>Welcome to Link Kiwi</h1>
           <p>Your gateway to innovative solutions and services.</p>
-          <button className="cta-button">Learn More</button>
+          {/* Use CustomButton here */}
+          <CustomButton text="Learn More" onClick={() => console.log('Learn More clicked')} />
         </div>
       </section>
 
+      {/* Features Section */}
       <section className="features">
         <h2>Our Features</h2>
         <div className="feature-cards">
           <div className="feature-card">
-            <img
-              src="https://images.pexels.com/photos/842548/pexels-photo-842548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Feature 1"
+            <LazyLoadImage
+              src="https://images.pexels.com/photos/842548/pexels-photo-842548.jpeg"
+              alt="Innovative Solutions"
+              effect="blur"
             />
             <h3>Innovative Solutions</h3>
             <p>
-              Cutting-Edge Technology: Harness the power of the latest
-              technology to drive your business forward. Customizable
-              Options: Tailor solutions to meet the unique needs of your
-              business. Seamless Integration: Easily integrate with existing
-              systems for a smooth transition.
+              Cutting-Edge Technology: Harness the power of the latest technology to drive your business forward.
             </p>
           </div>
           <div className="feature-card">
-            <img
-              src="https://images.pexels.com/photos/927629/pexels-photo-927629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Feature 2"
+            <LazyLoadImage
+              src="https://images.pexels.com/photos/927629/pexels-photo-927629.jpeg"
+              alt="Exceptional Support"
+              effect="blur"
             />
             <h3>Exceptional Support</h3>
             <p>
-              24/7 Availability: Get assistance whenever you need it, no matter
-              the time or day. Expert Team: Access a team of knowledgeable
-              professionals dedicated to your success.
+              24/7 Availability: Get assistance whenever you need it, no matter the time or day.
             </p>
           </div>
           <div className="feature-card">
-            <img
-              src="https://images.pexels.com/photos/935743/pexels-photo-935743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Feature 3"
+            <LazyLoadImage
+              src="https://images.pexels.com/photos/935743/pexels-photo-935743.jpeg"
+              alt="Advanced Analytics"
+              effect="blur"
             />
             <h3>Advanced Analytics</h3>
-            <p>
-              Real-Time Data: Access live data to make informed decisions
-              quickly. Comprehensive Reports: Generate detailed reports to
-              analyze performance and trends. Intelligent Insights: Leverage
-              AI-driven insights to optimize your strategies and achieve better
-              results.
-            </p>
+            <p>Real-Time Data: Access live data to make informed decisions quickly.</p>
           </div>
         </div>
       </section>
 
+      {/* Testimonials Section */}
       <section className="testimonials">
         <center>
           <h2>What Our Clients Say</h2>
@@ -95,20 +92,18 @@ const Home = () => {
             <cite>- Client 1</cite>
           </div>
           <div className="testimonial-card">
-            <p>
-              "Their solutions have greatly enhanced our business operations."
-            </p>
+            <p>"Their solutions have greatly enhanced our business operations."</p>
             <cite>- Client 2</cite>
           </div>
         </Slider>
       </section>
 
+      {/* Contact Section */}
       <section className="contact">
         <h2>Get in Touch</h2>
         <p>Have questions? Feel free to contact us.</p>
-        <button className="cta-button" onClick={redirectToContact}>
-          Contact Us
-        </button>
+        {/* Use CustomButton here */}
+        <CustomButton text="Contact Us" onClick={redirectToContact} />
       </section>
 
       <Footer />

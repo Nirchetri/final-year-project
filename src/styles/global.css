@@ -1,0 +1,37 @@
+/* src/styles/Global.css */
+:root {
+    --primary-color: #3498db; /* Primary brand color */
+    --secondary-color: #2ecc71; /* Secondary brand color */
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--secondary-color);
+  }
+  /* global.css */
+
+  
+  body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Set a default background color */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  button {
+    font-family: var(--font-family);
+  }
+  

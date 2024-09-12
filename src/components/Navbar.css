@@ -1,4 +1,4 @@
-
+/* src/components/Navbar.css */
 .navbar {
   width: 100%;
   background-color: #1f2937; /* Dark background color */
@@ -6,8 +6,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 10;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 10; /* Ensure it stays on top of other content */
 }
 
 .navbar-container {
@@ -71,6 +73,7 @@
 .navbar-links li:hover::after {
   width: 100%; /* Full-width underline on hover */
 }
+
 /* Hamburger Menu */
 .hamburger {
   display: none;
@@ -115,10 +118,7 @@
     display: flex; /* Show hamburger on mobile */
     margin-right: auto; /* Align hamburger to the left */
   }
-}
 
-/* Responsive styling */
-@media (max-width: 768px) {
   .navbar {
     justify-content: flex-start; /* Aligns items to the left */
   }

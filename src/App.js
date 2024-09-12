@@ -1,4 +1,3 @@
-
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -13,6 +12,7 @@ import Services from './pages/Services';
 import Solutions from './pages/Solutions';
 import ContactUs from './pages/ContactUs';
 import Industries from './pages/Industries';
+import '@fontsource/roboto'; // Adds the Roboto font
 
 const App = () => {
   return (

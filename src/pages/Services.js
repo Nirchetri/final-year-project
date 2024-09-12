@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDesktop, faMobileAlt, faShoppingCart, faBullhorn, faUsers, faCloud } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../components/Footer'; // Ensure the path is correct
 import './Services.css'; // For custom styling
+
+const ServiceItem = ({ icon, title, summary, details }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  return (
+    <div className="service-item">
+      <FontAwesomeIcon icon={icon} size="3x" className="service-icon"/>
+      <div className="service-details">
+        <h2>{title}</h2>
+        <p>{summary}</p>
+        {isExpanded && <p className="service-details-expanded">{details}</p>}
+        <button onClick={toggleExpand} className="read-more-button">
+          {isExpanded ? 'Read Less' : 'Read More'}
+        </button>
+      </div>
+    </div>
+  );
+};
 
 const Services = () => {
   return (
@@ -13,83 +35,47 @@ const Services = () => {
       </section>
 
       <section className="services-container">
-        <div className="service-item">
-          <FontAwesomeIcon icon={faDesktop} size="3x" className="service-icon"/>
-          <div className="service-details">
-            <h2>Web Development</h2>
-            <p>Our web development services focus on creating responsive, user-friendly websites that are tailored to your business goals.</p>
-            <ul>
-              <li><strong>Custom Website Design:</strong> Crafting unique, tailored website designs that reflect your brand identity.</li>
-              <li><strong>Responsive Design:</strong> Ensuring your site looks great on all devices, from desktops to smartphones.</li>
-              <li><strong>CMS Integration:</strong> Utilizing platforms like WordPress, Wix, or custom CMS solutions to make content management easy.</li>
-            </ul>
-          </div>
-        </div>
+        <ServiceItem
+          icon={faDesktop}
+          title="Web Development"
+          summary="Our web development services focus on creating responsive, user-friendly websites that are tailored to your business goals."
+          details="Crafting unique, tailored website designs that reflect your brand identity. Ensuring your site looks great on all devices, from desktops to smartphones. Utilizing platforms like WordPress, Wix, or custom CMS solutions to make content management easy."
+        />
 
-        <div className="service-item">
-          <FontAwesomeIcon icon={faMobileAlt} size="3x" className="service-icon"/>
-          <div className="service-details">
-            <h2>Mobile App Development</h2>
-            <p>We specialize in developing high-quality mobile applications that provide seamless user experiences across platforms.</p>
-            <ul>
-              <li><strong>iOS and Android Development:</strong> Building native and cross-platform apps that meet your business requirements.</li>
-              <li><strong>User-Centric Design:</strong> Creating intuitive interfaces that enhance user engagement and satisfaction.</li>
-              <li><strong>App Maintenance & Support:</strong> Providing ongoing support and updates to keep your app running smoothly.</li>
-            </ul>
-          </div>
-        </div>
+        <ServiceItem
+          icon={faMobileAlt}
+          title="Mobile App Development"
+          summary="We specialize in developing high-quality mobile applications that provide seamless user experiences across platforms."
+          details="Building native and cross-platform apps that meet your business requirements. Creating intuitive interfaces that enhance user engagement and satisfaction. Providing ongoing support and updates to keep your app running smoothly."
+        />
 
-        <div className="service-item">
-          <FontAwesomeIcon icon={faShoppingCart} size="3x" className="service-icon"/>
-          <div className="service-details">
-            <h2>E-Commerce Solutions</h2>
-            <p>We offer end-to-end services to create secure, scalable, and user-friendly e-commerce platforms that drive sales and customer loyalty.</p>
-            <ul>
-              <li><strong>Custom Online Stores:</strong> Developing personalized e-commerce websites tailored to your brand.</li>
-              <li><strong>Payment Gateway Integration:</strong> Implementing secure and convenient payment options for your customers.</li>
-              <li><strong>SEO & Marketing:</strong> Enhancing your online presence with search engine optimization and digital marketing strategies.</li>
-            </ul>
-          </div>
-        </div>
+        <ServiceItem
+          icon={faShoppingCart}
+          title="E-Commerce Solutions"
+          summary="We offer end-to-end services to create secure, scalable, and user-friendly e-commerce platforms that drive sales and customer loyalty."
+          details="Developing personalized e-commerce websites tailored to your brand. Implementing secure and convenient payment options for your customers. Enhancing your online presence with search engine optimization and digital marketing strategies."
+        />
 
-        <div className="service-item">
-          <FontAwesomeIcon icon={faBullhorn} size="3x" className="service-icon"/>
-          <div className="service-details">
-            <h2>Digital Marketing</h2>
-            <p>Our digital marketing services are designed to increase your brand visibility and engagement.</p>
-            <ul>
-              <li><strong>SEO & SEM:</strong> Improving your website's search engine ranking and increasing organic traffic.</li>
-              <li><strong>Social Media Marketing:</strong> Engaging your audience through targeted social media campaigns.</li>
-              <li><strong>Content Marketing:</strong> Creating compelling content that resonates with your audience and builds brand authority.</li>
-            </ul>
-          </div>
-        </div>
+        <ServiceItem
+          icon={faBullhorn}
+          title="Digital Marketing"
+          summary="Our digital marketing services are designed to increase your brand visibility and engagement."
+          details="Improving your website's search engine ranking and increasing organic traffic. Engaging your audience through targeted social media campaigns. Creating compelling content that resonates with your audience and builds brand authority."
+        />
 
-        <div className="service-item">
-          <FontAwesomeIcon icon={faUsers} size="3x" className="service-icon"/>
-          <div className="service-details">
-            <h2>UI/UX Design</h2>
-            <p>Our UI/UX design services focus on creating intuitive, engaging interfaces that provide an exceptional user experience.</p>
-            <ul>
-              <li><strong>User Research & Analysis:</strong> Understanding your audience to create designs that meet their needs.</li>
-              <li><strong>Wireframing & Prototyping:</strong> Developing detailed wireframes and prototypes to visualize the user journey.</li>
-              <li><strong>Usability Testing:</strong> Conducting tests to ensure your product is user-friendly and effective.</li>
-            </ul>
-          </div>
-        </div>
+        <ServiceItem
+          icon={faUsers}
+          title="UI/UX Design"
+          summary="Our UI/UX design services focus on creating intuitive, engaging interfaces that provide an exceptional user experience."
+          details="Understanding your audience to create designs that meet their needs. Developing detailed wireframes and prototypes to visualize the user journey. Conducting tests to ensure your product is user-friendly and effective."
+        />
 
-        <div className="service-item">
-          <FontAwesomeIcon icon={faCloud} size="3x" className="service-icon"/>
-          <div className="service-details">
-            <h2>Cloud Services</h2>
-            <p>We provide solutions that enhance scalability, flexibility, and security for your business operations.</p>
-            <ul>
-              <li><strong>Cloud Migration:</strong> Seamlessly moving your data and applications to the cloud.</li>
-              <li><strong>Cloud Infrastructure Management:</strong> Optimizing and managing your cloud resources for maximum efficiency.</li>
-              <li><strong>Data Backup & Recovery:</strong> Ensuring your data is protected with reliable backup and recovery solutions.</li>
-            </ul>
-          </div>
-        </div>
+        <ServiceItem
+          icon={faCloud}
+          title="Cloud Services"
+          summary="We provide solutions that enhance scalability, flexibility, and security for your business operations."
+          details="Seamlessly moving your data and applications to the cloud. Optimizing and managing your cloud resources for maximum efficiency. Ensuring your data is protected with reliable backup and recovery solutions."
+        />
       </section>
       <div className="footer-spacing" /> {/* Adds space before the footer */}
       <Footer />

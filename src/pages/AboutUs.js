@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import './AboutUs.css';
 import Footer from '../components/Footer'; // Correct path to Footer.js
 
@@ -7,20 +7,19 @@ const AboutUs = () => {
     <div className="about-us">
       {/* Hero Section */}
       <section className="about">
-  <div className="about-container">
-    <div className="about-content">
-      <h1>About Us</h1>
-      <p>
-        Welcome to Link Kiwi, where innovation meets creativity. Established
-        in [Year], we specialize in crafting exceptional digital experiences
-        that connect people and ideas.
-      </p>
-    </div>
-    <div className="about-image">
-      <img src="https://www.blogtyrant.com/wp-content/uploads/2011/02/best-about-us-pages.png" alt="About Us Image" />
-    </div>
-  </div>
-</section>
+        <div className="about-content">
+          <h1>About Us</h1>
+          <p>
+            Welcome to Link Kiwi, where innovation meets creativity. Established
+            in 2024 , we specialize in crafting exceptional digital experiences
+            that connect people and ideas.
+          </p>
+        </div>
+        <div className="about-image">
+          <img src="https://www.blogtyrant.com/wp-content/uploads/2011/02/best-about-us-pages.png" alt="About Us Img" />
+        </div>
+      </section>
+      
       {/* Our Mission Section */}
       <section className="mission">
         <div className="mission-container">
@@ -39,15 +38,14 @@ const AboutUs = () => {
           <center><h3>Our Story</h3></center>
         
           <blockquote className="story-quote">
-
             <p>
+              
               "Founded by <span className="founder-name">XYZ</span>, Link Kiwi began with a simple idea: to bridge the gap between technology and creativity. With a background in <span className="industry">[industry or field]</span>, <span className="founder-name">XYZ</span> set out to create a company that not only delivers exceptional products but also inspires change and innovation in the digital landscape."
             </p>
             <footer className="quote-author">Founder of Link Kiwi</footer>
           </blockquote>
         </div>
       </section>
-
 
       {/* Our Team Section */}
       <section className="team">
@@ -107,7 +105,7 @@ const AboutUs = () => {
                 className="team-card-image"
               />
               <div className="team-card-content">
-                <h3>Anita sharma</h3>
+                <h3>Anita Sharma</h3>
                 <p>UI/UX Designer</p>
               </div>
             </div>

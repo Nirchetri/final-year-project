@@ -1,3 +1,4 @@
+// src/components/Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Custom styling
@@ -14,7 +15,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/">
-            <img src="file.png" alt="Link Kiwi Logo" />
+            <img src="file.png" alt="Link Kiwi Logo" /> {/* Adjust path if necessary */}
           </Link>
         </div>
         <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
