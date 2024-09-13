@@ -1,11 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptopCode, faShoppingCart, faStethoscope, faBook, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../components/Footer';
 import './Industries.css';
 
 const industriesData = [
   {
     title: "Technology",
+    icon: faLaptopCode,
     description: "In the fast-paced world of technology, staying ahead is key. We provide cutting-edge web development and digital solutions that drive innovation and growth.",
     services: [
       "Web Development: Crafting responsive, high-performance websites that engage users and enhance brand visibility.",
@@ -14,6 +17,7 @@ const industriesData = [
   },
   {
     title: "E-Commerce",
+    icon: faShoppingCart,
     description: "Our e-commerce solutions are designed to optimize online sales and improve customer engagement. We create platforms that are secure, scalable, and easy to manage.",
     services: [
       "Custom Online Stores: Building bespoke e-commerce websites tailored to your brand and business goals.",
@@ -22,6 +26,7 @@ const industriesData = [
   },
   {
     title: "Healthcare",
+    icon: faStethoscope,
     description: "Link Kiwi is dedicated to enhancing healthcare delivery through technology. Our solutions focus on improving patient care and operational efficiency.",
     services: [
       "Healthcare Portals: Developing secure platforms for patient management and health information exchange.",
@@ -30,6 +35,7 @@ const industriesData = [
   },
   {
     title: "Education",
+    icon: faBook,
     description: "Transforming education through digital solutions, we provide platforms that support learning and collaboration in the digital age.",
     services: [
       "E-Learning Platforms: Creating interactive and engaging online learning environments.",
@@ -38,6 +44,7 @@ const industriesData = [
   },
   {
     title: "Finance",
+    icon: faDollarSign,
     description: "Our financial services solutions help organizations streamline operations, ensure compliance, and deliver exceptional customer experiences.",
     services: [
       "Fintech Solutions: Innovating financial services with custom software and applications.",
@@ -64,6 +71,7 @@ const Industries = () => {
           {industriesData.map((industry, index) => (
             <Col md={6} lg={4} key={index} className="industry-col">
               <Card className="industry-card">
+                <FontAwesomeIcon icon={industry.icon} className="industry-icon" />
                 <Card.Body>
                   <Card.Title className="industry-title">{industry.title}</Card.Title>
                   <Card.Text className="industry-description">

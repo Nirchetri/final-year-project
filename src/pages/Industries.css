@@ -1,66 +1,78 @@
 .hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    background-color: #f8f9fa; /* Light grey background */
-  }
-  
-  .hero-container {
-    text-align: center;
-    max-width: 800px;
-  }
-  
-  .hero-title {
-    font-size: 48px;
-    font-weight: bold;
-    color: #333;
-    animation: fadeIn 2s ease-in-out;
-  }
-  
-  .hero-description {
-    font-size: 20px;
-    color: #555;
-    margin-top: 20px;
-  }
-  
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  .industries-container {
-    margin-top: 40px;
-  }
-  
-  .industry-col {
-    margin-bottom: 30px;
-  }
-  
-  .industry-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .industry-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .industry-description {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .industry-services {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 15px;
-  }
-  
-  .industry-services li {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 5px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+.hero-container {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-description {
+  font-size: 20px;
+  color: #555;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.industries-container {
+  margin-top: 40px;
+}
+
+.industry-col {
+  margin-bottom: 30px;
+}
+
+.industry-card {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Add padding to ensure space for icons */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  text-align: center; /* Center text for better alignment */
+}
+
+.industry-card .industry-icon {
+  font-size: 4rem; /* Adjust size of icon */
+  color: #007bff; /* Adjust icon color */
+  margin-bottom: 1rem; /* Space between icon and title */
+}
+
+.industry-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 1rem; /* Space above title */
+}
+
+.industry-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 1rem; /* Space between description and title */
+}
+
+.industry-services {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.industry-services li {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
